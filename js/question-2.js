@@ -14,8 +14,10 @@ async function gameLibrary(){
         library.innerHTML = "";
 
         for (let i = 0; i < result.length; i++){
-            
-            
+            const test = result[i];
+            if(test === 8){
+                library.innerHTML = `<div><p>${test.name}</p></div>`;
+            }
         }
     }
     catch(error) {
