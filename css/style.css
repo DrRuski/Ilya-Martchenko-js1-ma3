@@ -1,7 +1,14 @@
-.game {
+.gameLibrary {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.game {
+    padding: 1rem;
     border: 1px solid #333;
-    padding: 3rem;
+    border-radius: 0.6rem;
+    background-color: #eee;
     
 }
