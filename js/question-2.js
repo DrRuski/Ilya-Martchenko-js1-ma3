@@ -3,22 +3,17 @@ const url = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=
 const library = document.querySelector(".gameLibrary");
 
 
-
-
 async function gameLibrary(){
     try {
         const response = await fetch(url);
         const dataResult = await response.json();
         const dataList = dataResult.results;
 
-        console.log(dataList);
-
         library.innerHTML = "";
 
         for (let i = 0; i < dataList.length; i++){
 
             const gameInformation = dataList[i];
-            
             
             if(gameInformation === 8){
                 break;
@@ -28,14 +23,12 @@ async function gameLibrary(){
             <p>Name: ${gameInformation.name}</p>
             <p>Rating: ${gameInformation.rating}</p>
             <p>Tags: ${gameInformation.tags.length}</p>
-            </div>`;
-        }
+            </div>`;}
     }
     catch(error) {
         console.log("Something Went Wrong", error);
-    }
+    }}
     
-}
 gameLibrary();
 
 
